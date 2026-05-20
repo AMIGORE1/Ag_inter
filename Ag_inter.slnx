@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Ag_inter/Ag_inter.vcxproj" Id="06b891f8-a0ce-4147-917f-6d4864dbab90" />
+</Solution>
