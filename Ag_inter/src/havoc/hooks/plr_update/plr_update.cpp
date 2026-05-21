@@ -28,6 +28,7 @@ void __fastcall hFpsPlayerUpdate(void* __this, const void* method)
         info.isDead = *(bool*)((uintptr_t)player + 0x428);
         info.health = *(float*)((uintptr_t)player + 0x14C);
         info.armor = *(float*)((uintptr_t)player + 0x140);
+
         info.worldPos = GetPosition(player);
 
         tempList.push_back(info);
