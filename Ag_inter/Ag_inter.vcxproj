@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\havoc\hooks\bone_esp\bone_esp.h" />
     <ClInclude Include="src\havoc\hooks\move_update\move_update.h" />
     <ClInclude Include="src\havoc\classes\player_movement.h" />
     <ClInclude Include="src\havoc\hooks\gun_update\gun_update.h" />
@@ -186,6 +187,7 @@
     <ClInclude Include="src\havoc\hooks\w2screen\w2screen.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\havoc\hooks\bone_esp\bone_esp.cpp" />
     <ClCompile Include="src\havoc\hooks\move_update\move_update.cpp" />
     <ClCompile Include="src\havoc\classes\wpn_stats.h" />
     <ClCompile Include="src\havoc\hooks\gun_update\gun_update.cpp" />

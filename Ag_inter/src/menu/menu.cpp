@@ -4,6 +4,7 @@
 #include "imgui/imgui_impl_win32.h"
 #include "core/global/config.h"
 #include "havoc/hooks/plr_update/plr_update.h"
+#include "../havoc/hooks/bone_esp/bone_esp.h"
 
 void Render()
 {
@@ -41,6 +42,16 @@ void Render()
             ImGui::Text("ESP & Visual Functions");
             ImGui::Checkbox("Esp", &config::showBox);
             ImGui::Separator();
+            ImGui::Checkbox("Bone ESP", &BoneEsp::showBoneEsp);
+
+            if (BoneEsp::showBoneEsp)
+            {
+                ImGui::Indent();
+                ImGui::ColorEdit4("Bone Color", (float*)&BoneEsp::boneColor, ImGuiColorEditFlags_NoInputs);
+                ImGui::ColorEdit4("Dead Bone Color", (float*)&BoneEsp::boneColorDead, ImGuiColorEditFlags_NoInputs);
+                ImGui::SliderFloat("Bone Thickness", &BoneEsp::boneThickness, 0.5f, 4.0f, "%.1f");
+                ImGui::Unindent();
+            }
 
             if (ImGui::SliderFloat("Field of View", &config::fov, 40.0f, 180.0f, "%.0f"))
             {

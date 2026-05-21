@@ -114,6 +114,9 @@
     <ClInclude Include="src\havoc\hooks\w2screen\w2screen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\havoc\hooks\bone_esp\bone_esp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ext\imgui\imgui.cpp">
@@ -201,6 +204,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\havoc\hooks\w2screen\w2screen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\havoc\hooks\bone_esp\bone_esp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

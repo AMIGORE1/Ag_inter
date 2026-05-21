@@ -4,6 +4,7 @@
 #include "imgui/imgui_impl_win32.h"
 #include "menu/menu.h"
 #include "../w2screen/w2screen.h"
+#include "../bone_esp/bone_esp.h"
 
 PresentFn oPresent = nullptr;
 bool Initialized = false;
@@ -161,6 +162,7 @@ HRESULT hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)
         }
 
         Esp::Draw();
+		BoneEsp::Draw();
 
         ImGui::Render();
         pContext->OMSetRenderTargets(1, &mainRenderTargetView, nullptr);

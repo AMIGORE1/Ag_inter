@@ -14,6 +14,7 @@
 #include "gun_update/gun_update.h"
 #include "move_update/move_update.h"
 #include "w2screen/w2screen.h"
+#include "bone_esp/bone_esp.h"
 
 bool Hooks::Init()
 {
@@ -155,6 +156,19 @@ bool Hooks::SetupW2screenHook()
     return true;
 }
 
+bool Hooks::SetupBoneTransformHook()
+{
+    if (MH_CreateHook(
+        reinterpret_cast<LPVOID>(moduleBase + 0x212BD60),
+        &hGetBoneTransformInternal,
+        reinterpret_cast<LPVOID*>(&oGetBoneTransformInternal)) != MH_OK)
+    {
+        printf("[-] MH_CreateHook BONE_TRANSFORM FAILED\n");
+        return false;
+    }
+    printf("[+] BONE_TRANSFORM Hook ENABLED successfully!\n");
+    return true;
+}
 
 void Hooks::Shutdown()
 {

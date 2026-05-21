@@ -16,6 +16,6 @@ namespace Hooks
 	bool SetupGunUpdateHook();
 	bool SetupMovementUpdateHook();
 	bool SetupW2screenHook();
-
+	bool SetupBoneTransformHook();
 	void Shutdown();
 }
