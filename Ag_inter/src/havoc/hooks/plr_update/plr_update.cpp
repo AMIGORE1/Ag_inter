@@ -8,8 +8,8 @@
 // -------------------------------------------------------
 
 #include "plr_update.h"
-#include "esp.h"           // замість повного визначення
-#include "bone_esp.h"
+#include "../esp/esp.h"
+#include "../bone_esp/bone_esp.h"
 
 Player* localPlayer = nullptr;
 
